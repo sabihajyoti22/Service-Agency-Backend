@@ -8,6 +8,7 @@ passport.use(
 			clientSecret: process.env.GOOGLE_CLIENT_SECRET,
 			callbackURL: "https://service-agency-2022.herokuapp.com/auth/google/callback",
 			scope: ["profile", "email"],
+			proxy: true 
 		},
 		function (accessToken, refreshToken, profile, callback) {
 			callback(null, profile);
