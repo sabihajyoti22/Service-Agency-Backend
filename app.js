@@ -44,6 +44,9 @@ app.get("/auth/google/callback",
 		failureRedirect: "/login/failed",
 	}),
 );
+app.get("/",(req,res)=>{
+	res.send("<h1>Home Route</h1>")
+})
 
 app.use("/user", authRoute);
 app.use("/api/orders", order);
