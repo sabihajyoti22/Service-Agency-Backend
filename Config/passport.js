@@ -6,7 +6,7 @@ passport.use(
 		{
 			clientID: process.env.GOOGLE_CLIENT_ID,
 			clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-			callbackURL: "https://service-agency-2022.herokuapp.com/auth/google/callback",
+			callbackURL: "http://herokupath/auth/google/callback",
 			scope: ["profile", "email"],
 			proxy: true 
 		},
