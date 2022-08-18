@@ -1,12 +1,9 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
-const passport = require("passport");
-const authRoute = require("./Routes/auth");
 const order = require("./Routes/order.route")
 const service = require("./Routes/service.route")
 const review = require("./Routes/review.route")
-const cookieSession = require("cookie-session");
 const app = express();
 
 // Google Auth
@@ -16,9 +13,7 @@ require("./Config/passport")
 require("./Config/db")
 
 // CORS
-app.use(
-	cors()
-);
+app.use(cors());
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
