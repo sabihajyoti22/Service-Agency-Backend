@@ -6,9 +6,6 @@ const service = require("./Routes/service.route")
 const review = require("./Routes/review.route")
 const app = express();
 
-// Google Auth
-require("./Config/passport")
-
 // Connect DB
 require("./Config/db")
 
