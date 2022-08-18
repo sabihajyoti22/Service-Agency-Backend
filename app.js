@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
 app.get("/", (req, res) => {
-	res.send("<h1>Try: 35</h1>")
+	res.send("<h1>Tried Thousand Times</h1>")
 })
 
 app.use("/api/orders", order);
