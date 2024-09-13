@@ -22,7 +22,7 @@ const createService = (req, res) => {
 }
 const updateService = async (req, res) => {
     try {
-        const selectedService = await serviceSchema.findOne({ id: req.params.id })
+        const selectedService = await serviceSchema.findOne({ _id: req.params.id })
         selectedService.serviceName = req.body.serviceName
         selectedService.serviceDesc = req.body.serviceDesc
         await selectedService.save()
@@ -34,7 +34,7 @@ const updateService = async (req, res) => {
 
 const deleteService = async (req, res) => {
     try {
-        await serviceSchema.deleteOne({ id: req.params.id })
+        await serviceSchema.deleteOne({ _id: req.params.id })
         res.status(202).send('Deleted one service')
     } catch (error) {
         res.status(500).send(error)

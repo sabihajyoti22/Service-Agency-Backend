@@ -13,7 +13,7 @@ const getUsers = async (req, res) => {
 
 const profile = async (req, res) => {
     try {
-        const profile = await userSchema.findOne({ id: req.params.id })
+        const profile = await userSchema.findOne({ _id: req.params.id })
         if (profile) {
             res.status(200).json(profile)
         }
