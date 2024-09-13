@@ -4,6 +4,7 @@ const cors = require("cors");
 const order = require("./Routes/order.route")
 const service = require("./Routes/service.route")
 const review = require("./Routes/review.route")
+const user = require("./Routes/user.route")
 const app = express();
 
 // Connect DB
@@ -21,5 +22,6 @@ app.get("/", (req, res) => {
 app.use("/api/orders", order);
 app.use("/api/services", service);
 app.use("/api/reviews", review);
+app.use("/api/user", user);
 
 module.exports = app
