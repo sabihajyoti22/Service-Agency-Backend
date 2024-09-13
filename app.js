@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
 })
 
 app.use("/api/orders", order);
-app.use("/api/servics", service);
+app.use("/api/services", service);
 app.use("/api/reviews", review);
 
 module.exports = app

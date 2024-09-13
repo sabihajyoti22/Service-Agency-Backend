@@ -1,9 +1,10 @@
 const express = require("express")
-const { getService, postService, updateService } = require("../Controller/service.controller")
+const { getServices, createService, updateService, deleteService } = require("../Controller/service.controller")
 const router = express.Router()
 
-router.get("/",getService)
-router.post("/",postService)
-router.patch("/:id",updateService)
+router.get("/", getServices)
+router.post("/", createService)
+router.patch("/:id", updateService)
+router.delete("/:id", deleteService)
 
 module.exports = router
